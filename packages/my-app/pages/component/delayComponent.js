@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../../styles/Home.module.css';
 
 function DelayComponent({ content, contentRemote }) {
-  const contentRepeat = new Array(1000).fill(
+  const contentRepeat = new Array(1).fill(
     <h1 className={styles.title}>
       {`Welcome to Next.js ${content}!`}
     </h1>,
@@ -17,7 +17,7 @@ function DelayComponent({ content, contentRemote }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   const contentRemote = await fetch('www.baidu.com');
   return {
     props: {
