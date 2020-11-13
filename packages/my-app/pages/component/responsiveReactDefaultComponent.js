@@ -6,10 +6,8 @@ import DelayComponent from './delayComponent';
 
 function HomeApp() {
   const isDesktop = useMediaQuery({ query: '(min-width: 1100px)' });
-  const isMobile = useMediaQuery({ query: '(max-width: 1099px)' });
 
-  const contentDesktop = isDesktop && <DelayComponent content="Desktop" />;
-  const contentMobile = isMobile && <DelayComponent content="Mobile" />;
+  const content = isDesktop ? <DelayComponent content="Desktop" /> : <DelayComponent content="Mobile" />;
   return (
     <div className={styles.container}>
       <Head>
@@ -21,15 +19,16 @@ function HomeApp() {
         <h1 className={styles.title}>
           Next.js for all!
         </h1>
-        {contentDesktop}
-        {contentMobile}
+        <br />
+
+        {content}
       </main>
 
     </div>
   );
 }
 
-export default function ResponsiveReactComponent() {
+export default function ResponsiveReactDefaultComponent() {
   return (
     <HomeApp />
   );

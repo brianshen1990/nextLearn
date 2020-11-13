@@ -1,20 +1,14 @@
 import React from 'react';
 import styles from '../../styles/Home.module.css';
 
-function DelayComponent({ content, contentRemote }) {
+function DelayComponent({ content }) {
   const contentRepeat = new Array(1).fill(
     <h1 className={styles.title}>
       {`Welcome to Next.js ${content}!`}
     </h1>,
   );
 
-  return (
-    <>
-      {`content : ${contentRemote}`}
-      <br />
-      {contentRepeat}
-    </>
-  );
+  return contentRepeat;
 }
 
 export async function getServerSideProps() {

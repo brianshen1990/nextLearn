@@ -1,10 +1,11 @@
 import React from 'react';
-// import ResponsiveFresnelComponent from './component/responsiveFresnelComponent';
+import ResponsiveFresnelComponent from './component/responsiveFresnelComponent';
 // import ResponsiveReactComponent from './component/responsiveReactComponent';
-import ResponsiveCssComponent from './component/responsiveCssComponent';
+// import ResponsiveCssComponent from './component/responsiveCssComponent';
+// import ResponsiveReactDefaultComponent from './component/responsiveReactDefaultComponent';
 
 export default function Home() {
   return (
-    <ResponsiveCssComponent />
+    <ResponsiveFresnelComponent />
   );
 }
